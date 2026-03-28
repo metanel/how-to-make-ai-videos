@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>מדריך ליצירת סרטון באמצעות כלי בינה מלאכותית</title>
+    <meta name="description" content="המדריך המלא ליצירת סרטונים בעזרת כלי AI: תסריט, שיבוט קולי, גיליון דמות, יצירת תמונות, הנפשה ועריכה.">
+    <meta name="robots" content="index, follow">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Heebo', sans-serif; 
+            background-color: #F8FAFC; 
+            color: #1E293B; 
+            scroll-behavior: smooth; 
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+        .bg-accent-light { background-color: #EEF2FF; color: #4F46E5; } 
+        .border-accent { border-color: #818CF8; }
+    </style>
+</head>
+<body class="antialiased flex flex-col items-center pb-12">
+
+    <main class="w-full flex flex-col items-center">
+        
+        <header class="w-full max-w-5xl px-6 pt-12 pb-10 md:pt-16 md:pb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-black mb-4 text-indigo-900 tracking-tight">מדריך ליצירת סרטון בבינה מלאכותית 🎬</h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-medium mb-8">השלבים המלאים להפקת וידאו: מתסריט ושיבוט קולי, ועד להנפשה וחיבור השוטים.</p>
+        </header>
+
+        <section class="w-full max-w-3xl px-6 mb-12">
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-slate-300">
+                <h2 class="text-2xl font-bold mb-4 text-slate-800">📋 תוכן עניינים</h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-600 font-medium">
+                    <li>1. תסריט</li>
+                    <li>2. שיבוט קולי</li>
+                    <li>3. יצירת גליון דמות</li>
+                    <li>4. יצירת התמונות בסצנה עצמה</li>
+                    <li>5. הנפשת התמונות שיצרנו</li>
+                    <li>6. קול ותמלול של הדמויות</li>
+                    <li>7. חיבור כל השוטים</li>
+                    <li>8. סיכום ונתונים טכניים</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="w-full max-w-3xl px-6 space-y-12">
+            
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-950">
+                    <span class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">1</span>
+                    תסריט
+                </h2>
+                <ul class="space-y-4 text-slate-700 font-medium mb-6">
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לבחור סצנה מפורסמת מסרט.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להעתיק את הקישור של הסצנה מיוטיוב ולהדביק ב-NoteGpt כדי שיהיה את כל המלל מהסצנה ביחד עם חותמת הזמן.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להמיר את הטקסט כך שיותאם עבור המסר שאנחנו רוצים להעביר עבור המוצר שלנו, לשמור על חותמת הזמן ולהדביק במקום שמור (לדוגמה גוגל דוקס).</li>
+                </ul>
+                <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-sm font-medium text-indigo-900">
+                    <strong class="block mb-1">💡 הסבר:</strong>
+                    <strong>NoteGpt</strong> הוא כלי AI לתמלול ולסיכום סרטונים, אליו ניתן לגשת פשוט דרך חיפוש בגוגל או כניסה לאתר שלהם. <strong>"חותמת זמן" (Timestamp)</strong> היא סימון של הרגע המדויק בסרטון (בדקות ושניות) שבו מתרחש אירוע או נאמר טקסט מסוים.
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
+                <h2 class="text-2xl font-bold mb-2 flex items-center gap-3 text-indigo-950">
+                    <span class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">2</span>
+                    שיבוט קולי
+                </h2>
+                <p class="text-sm text-slate-500 mb-6 font-medium">(רק במידה ואנחנו רוצים שיופיע קול שישמע כמו הקול שלנו או של הדמות מהסצנה)</p>
+                <ul class="space-y-4 text-slate-700 font-medium mb-6">
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> במידה ויש 2 דמויות בסצנה שמדברות - לבחור מי הדמות שלנו מהסצנה, להוריד את הסצנה מיוטיוב ולהסיר דרך קאפקאט (CapCut) את כל הקטעים של הדמות שבחרנו שהיא שלנו.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לקחת את הסרטון שנשאר שהוא רק של הדמות השנייה, כדי לשבט את הקול שלו עם MiniMax.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להקליט ל-MiniMax את הקול שלנו כדי שיהיה לנו גם שיבוט קולי שלנו.</li>
+                </ul>
+                <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-sm font-medium text-indigo-900">
+                    <strong class="block mb-1">💡 הסבר:</strong>
+                    <strong>"לשבט את הקול" (Voice Cloning)</strong> הוא תהליך שבו מערכת בינה מלאכותית לומדת את מאפייני הקול של אדם מסוים מקטע מוקלט, ויכולה לאחר מכן לייצר דיבור חדש שנשמע בדיוק כמוהו.
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-950">
+                    <span class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">3</span>
+                    יצירת גליון דמות
+                </h2>
+                <ul class="space-y-4 text-slate-700 font-medium mb-6">
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לעלות תמונה של הדמות שאנחנו רוצים ״להכנס לנעליים שלה״ לג׳מיני ולשאול לפרטי פרטים מה הלבוש של הדמות הזאת.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לייצר עם ג׳מיני בשיחה נפרדת 2 הנחיות שנוכל להדביק לאחר מכן ב-higgsfield.ai (כדי לדאוג שיהיה לנו אותו הלבוש כמו של הדמות המקורית).</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> <strong>הנחייה ראשונה:</strong> עבור יצירת גליון דמות של קלוז אפ על הפרצוף שלנו מכמה כיוונים ביחד עם פרטי הלבוש המפורטים.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> <strong>הנחייה שנייה:</strong> עבור יצירת גליון הדמות של הגוף שלנו עם פרטי הלבוש המפורטים.</li>
+                </ul>
+                <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-sm font-medium text-indigo-900">
+                    <strong class="block mb-1">💡 הסבר:</strong>
+                    <strong>"גליון דמות" (Character Sheet)</strong> הוא אוסף תמונות המציג את הדמות מזוויות שונות כדי לשמור על עקביות. צריך אחד לפנים (עבור קלוז-אפים מדויקים והבעות) ואחד לגוף (עבור פרופורציות, תנוחות ולבוש מלא).
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-950">
+                    <span class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">4</span>
+                    יצירת התמונות בסצנה עצמה
+                </h2>
+                <ul class="space-y-4 text-slate-700 font-medium mb-6">
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לכתוב במספרים כמה שוטים שונים יש בסצנה.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לבחור ״שם כותרת״ לכל שוט ולרשום מה תנועת המצלמה שהייתה בשוט.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לצלם 2 תמונות מסך של השוט (מהפריים הראשון ומהפריים האחרון).</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להעלות ל"ננו בננה פרו" כל תמונה בנפרד עם הנחיה לעלות את האיכות. לאחר מכן, לבקש להסיר את הדמות המרכזית שקיימת שם.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לחתוך מגליון הדמות בדיוק את החלק שצריך עבור השוט (פנים / גוף מלא בהתאם לכיוון), להעלות ל"ננו בננה פרו" כדי לשפר איכות, ולשלב את הדמות שלנו בתוך השוט הריק.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לייצר תיקיה במחשב לכל שוט, ובתוכה לשמור את התמונה של הפריים הראשון והאחרון עם הדמות שלנו. בנוסף, ליצור קובץ טקסט עם המלל וחותמת הזמן מהתסריט.</li>
+                </ul>
+                <div class="space-y-3">
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-sm font-medium text-indigo-900">
+                        <strong class="block mb-1">💡 הסבר שוט ופריים:</strong>
+                        <strong>"שוט" (Shot)</strong> הוא קטע וידאו רציף שצולם ללא חיתוך או הפסקת מצלמה. <strong>"פריים" (Frame)</strong> הוא תמונה בודדת מתוך הרצף שמרכיב את הוידאו.
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-sm font-medium text-indigo-900">
+                        <strong class="block mb-1">💡 הסבר ננו בננה פרו:</strong>
+                        מודל מתקדם של גוגל לעריכת תמונות. המודל זמין למשתמשי אפליקציית ג'מיני בתוכניות הפרימיום.
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-950">
+                    <span class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">5</span>
+                    הנפשת התמונות שיצרנו
+                </h2>
+                <ul class="space-y-4 text-slate-700 font-medium">
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להכנס ל-higgsfield.ai ל-“cinema studio video” ולבחור ב-single shot.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להגדיר מידות: 16:9 (קולנועי) או 9:16 (לרשתות חברתיות). איכות: 1080p. אודיו: מומלץ Off.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> ללחוץ על Start frame ולעלות את התמונה מהפריים הראשון, וב-End frame לעלות את התמונה מהפריים האחרון.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לבחור את תנועת המצלמה והזמן על פי חותמת הזמן שרשמנו.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> בפאנל המנהלים: לעלות את גליון הדמות (פנים וגוף) לדמות עם שם אחד כדי שהיא תופיע באופן חלק.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להכין הנחייה מסודרת לתיאור השוט, להפיק את הוידאו ולחזור על התהליך לכל השוטים.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-950">
+                    <span class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">6</span>
+                    קול ותמלול של הדמויות
+                </h2>
+                <ul class="space-y-4 text-slate-700 font-medium mb-6">
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> כדי להכין את השוט לתמלול יש לוודא: רואים בבירור את הפה והלסת, תנועת הראש מתונה, והדמות לא מדברת בשוט שיוצר.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לרשום את הטקסט שאנחנו רוצים שהדמויות יגידו במערכת שיבוט הקול (MiniMax) ולהוריד את הסאונד.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להכנס ל-RunwayML -> All Tools -> Audio tools -> Lip Sync Video.</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להעלות את השוט ביחד עם הסאונד שיצרנו ולייצר את השוט המתומלל עם תנועות שפתיים מותאמות.</li>
+                </ul>
+                <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-sm font-medium text-indigo-900">
+                    <strong class="block mb-1">💡 הסבר:</strong>
+                    <strong>Voice over (קריינות רקע)</strong> הוא קול של קריין הנשמע ברקע הסרטון, כאשר הדובר עצמו אינו נראה על המסך מדבר. (במידה ויש רק Voice over, ניתן לדלג על שלב תמלול השפתיים).
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-t-4 border-accent">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-950">
+                    <span class="bg-accent-light w-8 h-8 rounded-full flex items-center justify-center font-black">7</span>
+                    חיבור כל השוטים
+                </h2>
+                <ul class="space-y-4 text-slate-700 font-medium mb-6">
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להוריד את כל השוטים המוכנים שלנו ולהכנס לקאפקאט (CapCut).</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לחבר אותם אחד אחרי השני (לחתוך קטעים מתים).</li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להוסיף מוזיקת רקע ואפקטים קוליים (Sound effects). לשמור על קצב אחיד לסרטון.</li>
+                </ul>
+                <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-sm font-medium text-indigo-900">
+                    <strong class="block mb-1">💡 הסבר:</strong>
+                    <strong>"קצב אחיד" (Pacing)</strong> מתייחס למהירות זרימת המידע והעריכה - חיתוכים, מעברים בין שוטים, והתאמתם לאודיו - כך שהצופה חווה רצף הגיוני שאינו מהיר או איטי מדי.
+                </div>
+            </div>
+
+            <div class="bg-slate-800 rounded-3xl p-6 md:p-8 card-shadow text-white mt-8">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-indigo-200">
+                    סיכום ונתונים טכניים
+                </h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-medium">
+                    <div class="bg-slate-700/50 p-4 rounded-xl border border-slate-600">
+                        <strong class="text-indigo-300 block mb-2 text-base">⏱️ זמן עבודה מוערך</strong>
+                        1.5 עד 2.5 שעות לסרטון בודד למשתמש מתקדם.
+                        <ul class="mt-2 text-slate-300 space-y-1 text-xs">
+                            <li>• תסריט: 10-15 דק'</li>
+                            <li>• שיבוט קולי: 10-15 דק'</li>
+                            <li>• גיליון דמות: 10-20 דק'</li>
+                            <li>• יצירת תמונות: 30-45 דק'</li>
+                            <li>• הנפשה: 15-25 דק'</li>
+                            <li>• קול ותמלול: 10-15 דק'</li>
+                            <li>• חיבור ועריכה: 5-15 דק'</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-slate-700/50 p-4 rounded-xl border border-slate-600">
+                        <strong class="text-indigo-300 block mb-2 text-base">🛠️ רשימת כלים</strong>
+                        YouTube, NoteGpt, תוכנת טקסט (Google Docs), CapCut, MiniMax, Gemini (ננו בננה פרו), higgsfield.ai, RunwayML.
+                    </div>
+
+                    <div class="bg-slate-700/50 p-4 rounded-xl border border-slate-600">
+                        <strong class="text-indigo-300 block mb-2 text-base">💰 עלויות הפקה (כיום)</strong>
+                        עלות חודשית למנויים (MiniMax, RunwayML, higgsfield.ai, Gemini) היא כ-70 דולר. בייצור 30 סרטונים, העלות לסרטון עומדת על כ-2.33 דולר. בגרסאות חינמיות ניתן לייצר 1-2 סרטונים בשל מגבלת קרדיטים.
+                    </div>
+
+                    <div class="bg-slate-700/50 p-4 rounded-xl border border-slate-600">
+                        <strong class="text-indigo-300 block mb-2 text-base">📉 השוואה לעבר</strong>
+                        בעבר הפקה כזו דרשה עשרות עד מאות אלפי שקלים (צוות, שחקנים, ציוד) ומספר שבועות עד חודשים להשלמת כל שלבי ההפקה.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
