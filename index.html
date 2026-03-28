@@ -24,7 +24,42 @@
         }
         .bg-accent-light { background-color: #EEF2FF; color: #4F46E5; } 
         .border-accent { border-color: #818CF8; }
+        
+        /* Custom scrollbar for pre blocks */
+        pre::-webkit-scrollbar {
+            width: 8px;
+        }
+        pre::-webkit-scrollbar-track {
+            background: #1e293b; 
+            border-radius: 8px;
+        }
+        pre::-webkit-scrollbar-thumb {
+            background: #475569; 
+            border-radius: 8px;
+        }
+        pre::-webkit-scrollbar-thumb:hover {
+            background: #64748b; 
+        }
     </style>
+
+    <script>
+        function copyText(button, elementId) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = button.innerText;
+                button.innerText = 'הועתק!';
+                button.classList.add('bg-green-600');
+                button.classList.remove('bg-slate-600');
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.classList.remove('bg-green-600');
+                    button.classList.add('bg-slate-600');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
 </head>
 <body class="antialiased flex flex-col items-center pb-12">
 
@@ -92,8 +127,28 @@
                     יצירת גליון דמות
                 </h2>
                 <ul class="space-y-4 text-slate-700 font-medium mb-6">
-                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לעלות תמונה של הדמות שאנחנו רוצים ״להכנס לנעליים שלה״ לג׳מיני ולשאול לפרטי פרטים מה הלבוש של הדמות הזאת.</li>
-                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לייצר עם ג׳מיני בשיחה נפרדת 2 הנחיות שנוכל להדביק לאחר מכן ב-higgsfield.ai (כדי לדאוג שיהיה לנו אותו הלבוש כמו של הדמות המקורית).</li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500 mt-1">✅</span> 
+                        <div class="w-full">
+                            לעלות תמונה של הדמות שאנחנו רוצים ״להכנס לנעליים שלה״ לג׳מיני ולשאול לפרטי פרטים מה הלבוש של הדמות הזאת.
+                            <div class="relative bg-slate-800 text-slate-200 p-4 rounded-xl my-3 text-sm font-sans border border-slate-700 shadow-inner">
+                                <button onclick="copyText(this, 'prompt-1')" class="absolute top-3 left-3 bg-slate-600 hover:bg-slate-500 text-white text-xs px-3 py-1.5 rounded-lg transition-colors font-bold shadow-sm">העתק</button>
+                                <pre id="prompt-1" class="whitespace-pre-wrap font-inherit pr-2 pl-16 max-h-48 overflow-y-auto leading-relaxed">תרשום לי בבקשה בפרטי פרטים את הלבוש של הדמות בתמונה הזאת</pre>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500 mt-1">✅</span> 
+                        <div class="w-full">
+                            לייצר עם ג׳מיני בשיחה נפרדת 2 הנחיות שנוכל להדביק לאחר מכן ב-higgsfield.ai (כדי לדאוג שיהיה לנו אותו הלבוש כמו של הדמות המקורית).
+                            <div class="relative bg-slate-800 text-slate-200 p-4 rounded-xl my-3 text-sm font-sans border border-slate-700 shadow-inner">
+                                <button onclick="copyText(this, 'prompt-2')" class="absolute top-3 left-3 bg-slate-600 hover:bg-slate-500 text-white text-xs px-3 py-1.5 rounded-lg transition-colors font-bold shadow-sm">העתק</button>
+                                <pre id="prompt-2" class="whitespace-pre-wrap font-inherit pr-2 pl-16 max-h-48 overflow-y-auto leading-relaxed">קח את התיאור המפורט של הדמות והלבוש שחילצת כעת מהתמונה, וכתוב לי 2 הנחיות (Prompts) מדויקות באנגלית בלבד המיועדות למחולל תמונות, מוכנות להעתקה והדבקה:
+1. הנחיה לגיליון פנים (Face Turnaround): תמונה אחת המציגה שורה אופקית של 3 תקריבי פנים של הדמות (חזית, פרופיל שמאל, פרופיל ימין) על רקע לבן נקי. שלב בהנחיה את תיאור מראה הפנים ושמור על זהות אחידה בין הזוויות.
+2. הנחיה לגיליון גוף שלם (Full-Body Turnaround): תמונה אחת המציגה שורה אופקית של 4 תצוגות גוף שלם של הדמות (חזית, פרופיל שמאל, פרופיל ימין, גב) על רקע לבן נקי. שלב בהנחיה את תיאור הלבוש המלא במדויק. הדמות צריכה לעמוד בתנוחת A-pose רגועה עם הקפדה על עקביות מוחלטת של פריטי הלבוש בכל הזוויות.</pre>
+                            </div>
+                        </div>
+                    </li>
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> <strong>הנחייה ראשונה:</strong> עבור יצירת גליון דמות של קלוז אפ על הפרצוף שלנו מכמה כיוונים ביחד עם פרטי הלבוש המפורטים.</li>
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> <strong>הנחייה שנייה:</strong> עבור יצירת גליון הדמות של הגוף שלנו עם פרטי הלבוש המפורטים.</li>
                 </ul>
@@ -112,8 +167,37 @@
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לכתוב במספרים כמה שוטים שונים יש בסצנה.</li>
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לבחור ״שם כותרת״ לכל שוט ולרשום מה תנועת המצלמה שהייתה בשוט.</li>
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לצלם 2 תמונות מסך של השוט (מהפריים הראשון ומהפריים האחרון).</li>
-                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להעלות ל"ננו בננה פרו" כל תמונה בנפרד עם הנחיה לעלות את האיכות. לאחר מכן, לבקש להסיר את הדמות המרכזית שקיימת שם.</li>
-                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לחתוך מגליון הדמות בדיוק את החלק שצריך עבור השוט (פנים / גוף מלא בהתאם לכיוון), להעלות ל"ננו בננה פרו" כדי לשפר איכות, ולשלב את הדמות שלנו בתוך השוט הריק.</li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500 mt-1">✅</span> 
+                        <div class="w-full">
+                            להעלות ל"ננו בננה פרו" כל תמונה בנפרד עם הנחיה לעלות את האיכות.
+                            <div class="relative bg-slate-800 text-slate-200 p-4 rounded-xl my-3 text-sm font-sans border border-slate-700 shadow-inner">
+                                <button onclick="copyText(this, 'prompt-3')" class="absolute top-3 left-3 bg-slate-600 hover:bg-slate-500 text-white text-xs px-3 py-1.5 rounded-lg transition-colors font-bold shadow-sm">העתק</button>
+                                <pre id="prompt-3" class="whitespace-pre-wrap font-inherit pr-2 pl-16 max-h-48 overflow-y-auto leading-relaxed">תייצר את התמונה מחדש באיכות גבוהה יותר</pre>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לאחר מכן, לבקש להסיר את הדמות המרכזית שקיימת שם.</li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500 mt-1">✅</span> 
+                        <div class="w-full">
+                            לחתוך מגליון הדמות בדיוק את החלק שצריך עבור השוט (פנים / גוף מלא בהתאם לכיוון), להעלות ל"ננו בננה פרו" כדי לשפר איכות.
+                            <div class="relative bg-slate-800 text-slate-200 p-4 rounded-xl my-3 text-sm font-sans border border-slate-700 shadow-inner">
+                                <button onclick="copyText(this, 'prompt-4')" class="absolute top-3 left-3 bg-slate-600 hover:bg-slate-500 text-white text-xs px-3 py-1.5 rounded-lg transition-colors font-bold shadow-sm">העתק</button>
+                                <pre id="prompt-4" class="whitespace-pre-wrap font-inherit pr-2 pl-16 max-h-48 overflow-y-auto leading-relaxed">תייצר את התמונה מחדש באיכות גבוהה יותר</pre>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500 mt-1">✅</span> 
+                        <div class="w-full">
+                            לשלב את הדמות שלנו בתוך השוט הריק. פעולה זו מתבצעת על ידי הפנייה באמצעות הוספת התו <strong>@</strong> כדי לסמן את הדמות וכן את תמונת הרקע הריק.
+                            <div class="relative bg-slate-800 text-slate-200 p-4 rounded-xl my-3 text-sm font-sans border border-slate-700 shadow-inner">
+                                <button onclick="copyText(this, 'prompt-5')" class="absolute top-3 left-3 bg-slate-600 hover:bg-slate-500 text-white text-xs px-3 py-1.5 rounded-lg transition-colors font-bold shadow-sm">העתק</button>
+                                <pre id="prompt-5" class="whitespace-pre-wrap font-inherit pr-2 pl-16 max-h-48 overflow-y-auto leading-relaxed">הוסף את הדמות הזאת [@שם_הדמות] לתוך השוט הזה [@שם_השוט_הריק]</pre>
+                            </div>
+                        </div>
+                    </li>
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לייצר תיקיה במחשב לכל שוט, ובתוכה לשמור את התמונה של הפריים הראשון והאחרון עם הדמות שלנו. בנוסף, ליצור קובץ טקסט עם המלל וחותמת הזמן מהתסריט.</li>
                 </ul>
                 <div class="space-y-3">
@@ -139,7 +223,19 @@
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> ללחוץ על Start frame ולעלות את התמונה מהפריים הראשון, וב-End frame לעלות את התמונה מהפריים האחרון.</li>
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> לבחור את תנועת המצלמה והזמן על פי חותמת הזמן שרשמנו.</li>
                     <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> בפאנל המנהלים: לעלות את גליון הדמות (פנים וגוף) לדמות עם שם אחד כדי שהיא תופיע באופן חלק.</li>
-                    <li class="flex items-start gap-2"><span class="text-indigo-500">✅</span> להכין הנחייה מסודרת לתיאור השוט, להפיק את הוידאו ולחזור על התהליך לכל השוטים.</li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500 mt-1">✅</span> 
+                        <div class="w-full">
+                            להכין הנחייה מסודרת לתיאור השוט, להפיק את הוידאו ולחזור על התהליך לכל השוטים.
+                            <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-sm font-medium text-indigo-900 mt-3">
+                                <strong class="block mb-2">💡 דוגמאות להנחיות תיאור שוט (Prompts):</strong>
+                                <ul class="space-y-2 text-slate-700" dir="ltr">
+                                    <li><span class="font-bold">Example 1:</span> "A man wearing a blue suit walking slowly down a dimly lit hallway, cinematic lighting, realistic textures, looking directly at the camera."</li>
+                                    <li><span class="font-bold">Example 2:</span> "Close up shot of a woman with red hair drinking coffee at a cafe table, sunlight shining through the window, gentle breeze, natural movement."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
